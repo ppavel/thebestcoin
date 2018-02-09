@@ -257,11 +257,11 @@ UniValue stop(const JSONRPCRequest& jsonRequest)
     if (jsonRequest.fHelp || jsonRequest.params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Vertcoin server.");
+            "\nStop TheBestCoin server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "Vertcoin server stopping";
+    return "TheBestCoin server stopping";
 }
 
 /**
@@ -431,8 +431,10 @@ UniValue CRPCTable::execute(const JSONRPCRequest &request) const
 
     // Find method
     const CRPCCommand *pcmd = tableRPC[request.strMethod];
-    if (!pcmd)
+    if (!pcmd) {
+        LogPrint("rpc", "Unknown method \"%s\" called.\n", request.strMethod);
         throw JSONRPCError(RPC_METHOD_NOT_FOUND, "Method not found");
+    }
 
     g_rpcSignals.PreCommand(*pcmd);
 
@@ -462,7 +464,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(const std::string& methodname, const std::string& args)
 {
-    return "> vertcoin-cli " + methodname + " " + args + "\n";
+    return "> thebestcoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(const std::string& methodname, const std::string& args)

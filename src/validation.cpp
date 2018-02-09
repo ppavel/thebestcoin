@@ -89,7 +89,7 @@ static void CheckBlockIndex(const Consensus::Params& consensusParams);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Vertcoin Signed Message:\n";
+const string strMessageMagic = "TheBestCoin Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -1088,8 +1088,8 @@ bool ReadBlockFromDisk(CBlock& block, const CDiskBlockPos& pos, int nHeight, con
     }
 
     // Check the header
-    if (!CheckProofOfWork(block.GetPoWHash(nHeight), block.nBits, consensusParams))
-        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
+    if (!CheckProofOfWork(block.GetPoWHash(), block.nBits, consensusParams))
+        return error("ReadBlockFromDisk (%s): Errors in block header at %s, nheight=%d", Params().NetworkIDString(), pos.ToString(), nHeight);
 
     return true;
 }
@@ -1107,8 +1107,7 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
-    CAmount nSubsidy = 50 * COIN;
-    // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
+    CAmount nSubsidy = 10000 * COIN;
     nSubsidy >>= halvings;
 
     if (nSubsidy <= 0)
@@ -1123,21 +1122,45 @@ bool IsInitialBlockDownload()
     // Once this function has returned false, it must remain false.
     static std::atomic<bool> latchToFalse{false};
     // Optimization: pre-test latch before taking the lock.
-    if (latchToFalse.load(std::memory_order_relaxed))
+    if (latchToFalse.load(std::memory_order_relaxed)) {
         return false;
+    }
 
     LOCK(cs_main);
-    if (latchToFalse.load(std::memory_order_relaxed))
+
+    if (latchToFalse.load(std::memory_order_relaxed)) {
         return false;
-    if (fImporting || fReindex)
+    }
+    if (fImporting || fReindex) {
         return true;
-    if (chainActive.Tip() == NULL)
+    }
+
+    if (chainActive.Tip() == NULL) {
         return true;
-    if (chainActive.Tip()->nChainWork < UintToArith256(chainParams.GetConsensus().nMinimumChainWork))
+    }
+
+    // @todo: return this check instead of checkpoints when nChainWork would get higher
+//    if (chainActive.Tip()->nChainWork < UintToArith256(chainParams.GetConsensus().nMinimumChainWork)) {
+//        LogPrintf(
+//                "IBD: true (chainActive.Tip()->nChainWork = %s, UintToArith256(chainParams.GetConsensus().nMinimumChainWork) = %s)\n",
+//                chainActive.Tip()->nChainWork.ToString(),
+//                chainParams.GetConsensus().nMinimumChainWork.ToString()
+//        );
+//
+//        return true;
+//    }
+
+    // @todo: remove this check when nMinimumChainWork will be in charge
+    if (fCheckpointsEnabled && chainActive.Height() < Checkpoints::GetTotalBlocksEstimate(chainParams.Checkpoints())) {
         return true;
-    if (chainActive.Tip()->GetBlockTime() < (GetTime() - nMaxTipAge) && chainParams.NetworkIDString() != CBaseChainParams::TESTNET)
+    }
+
+    if (chainActive.Tip()->GetBlockTime() < (GetTime() - nMaxTipAge) && chainParams.NetworkIDString() != CBaseChainParams::TESTNET) {
         return true;
+    }
+
     latchToFalse.store(true, std::memory_order_relaxed);
+
     return false;
 }
 
@@ -1619,7 +1642,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("vertcoin-scriptch");
+    RenameThread("thebestcoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -2731,8 +2754,10 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, const 
     }
 
     // Check proof of work matches claimed amount
-    if (fCheckPOW && !CheckProofOfWork(block.GetPoWHash(nHeight), block.nBits, consensusParams))
+    if (fCheckPOW && !CheckProofOfWork(block.GetPoWHash(), block.nBits, consensusParams)) {
+        LogPrintf("CheckBlockHeader: CheckProofOfWork failed for hash %s.\n", block.GetPoWHash().GetHex());
         return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
+    }
 
     return true;
 }
@@ -2898,7 +2923,7 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
         return state.Invalid(false, REJECT_INVALID, "time-too-new", "block timestamp too far in the future");
 
     /*
-        Vertcoin <= 0.10.0.2 has a bug left behind from years ago where it never rejected old nVersion numbers
+        Bitcoin <= 0.10.0.2 has a bug left behind from years ago where it never rejected old nVersion numbers
         so we shouldn't reject nVersion < VERSIONBITS_TOP_BITS blocks until SegWit has been enabled
     */  
     if(block.nVersion < VERSIONBITS_TOP_BITS && IsWitnessEnabled(pindexPrev, consensusParams))
@@ -2909,8 +2934,8 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
     
     // BIP148 mandatory segwit signalling.
     int64_t nMedianTimePast = pindexPrev->GetMedianTimePast();
-    if ( (nMedianTimePast >= 1496188800) &&  // Wed 31 May 2017 00:00:00 GMT
-         (nMedianTimePast <= 1519862400) &&  // Thu 1 March 2018 00:00:00 GMT
+    if ((nMedianTimePast >= 1517591350) &&
+         (nMedianTimePast <= 1530134800) &&
          (!IsWitnessLockedIn(pindexPrev, consensusParams) &&  // Segwit is not locked in
           !IsWitnessEnabled(pindexPrev, consensusParams)) )   // and is not active.
     {
@@ -2964,8 +2989,10 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, const Co
     //   {0xaa, 0x21, 0xa9, 0xed}, and the following 32 bytes are SHA256^2(witness root, witness nonce). In case there are
     //   multiple, the last one is used.
     bool fHaveWitness = false;
+
     if (VersionBitsState(pindexPrev, consensusParams, Consensus::DEPLOYMENT_SEGWIT, versionbitscache) == THRESHOLD_ACTIVE) {
         int commitpos = GetWitnessCommitmentIndex(block);
+
         if (commitpos != -1) {
             bool malleated = false;
             uint256 hashWitness = BlockWitnessMerkleRoot(block, &malleated);
@@ -4060,7 +4087,7 @@ static const uint64_t MEMPOOL_DUMP_VERSION = 1;
 bool LoadMempool(void)
 {
     int64_t nExpiryTimeout = GetArg("-mempoolexpiry", DEFAULT_MEMPOOL_EXPIRY) * 60 * 60;
-    FILE* filestr = fopen((GetDataDir() / "mempool.dat").string().c_str(), "r");
+    FILE* filestr = fopen((GetDataDir() / "mempool.dat").string().c_str(), "rb");
     CAutoFile file(filestr, SER_DISK, CLIENT_VERSION);
     if (file.IsNull()) {
         LogPrintf("Failed to open mempool file from disk. Continuing anyway.\n");
@@ -4138,7 +4165,7 @@ void DumpMempool(void)
     int64_t mid = GetTimeMicros();
 
     try {
-        FILE* filestr = fopen((GetDataDir() / "mempool.dat.new").string().c_str(), "w");
+        FILE* filestr = fopen((GetDataDir() / "mempool.dat.new").string().c_str(), "wb");
         if (!filestr) {
             return;
         }

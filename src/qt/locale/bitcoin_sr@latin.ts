@@ -73,7 +73,7 @@
     </message>
 </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>Error</source>
         <translation>Greska</translation>
@@ -159,10 +159,10 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
-        <source>Vertcoin Core</source>
-        <translation>Vertcoin Core</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

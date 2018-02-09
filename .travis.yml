@@ -75,8 +75,8 @@ script:
 - if [ -n "$OSX_SDK" ]; then mkdir out/$TRAVIS_PULL_REQUEST/$TRAVIS_JOB_NUMBER-$HOST;
   fi
 - if [ -n "$OSX_SDK" ]; then mkdir ${OUTDIR}/bin; fi
-- if [ -n "$OSX_SDK" ]; then cp -rf build/Vertcoin-Qt.app ${OUTDIR}/bin; fi
-- if [ -n "$OSX_SDK" ]; then cp -rf build/Vertcoin-Core.dmg ${OUTDIR}/bin; fi
+- if [ -n "$OSX_SDK" ]; then cp -rf build/TheBestCoin-Qt.app ${OUTDIR}/bin; fi
+- if [ -n "$OSX_SDK" ]; then cp -rf build/TheBestCoin-Core.dmg ${OUTDIR}/bin; fi
 - ls -la
 - ls -la ${OUTDIR}/bin
 - export LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/depends/$HOST/lib
@@ -85,13 +85,13 @@ after_script:
 - echo $TRAVIS_COMMIT_LOG
 notifications:
   irc: chat.freenode.net#multicoin-co
-before_deploy: cd ${OUTDIR}/../ && zip -r vertcoin-$HOST.zip ${OUTDIR}
+before_deploy: cd ${OUTDIR}/../ && zip -r thebestcoin-$HOST.zip ${OUTDIR}
 deploy:
   skip_cleanup: true
   provider: releases
   api_key:
     secure: fnes0KZvtingUXqcn2NIDPnUV75nOwIgnjvz5GaT4V2uE4dtioYdG12+TVLPqdtL81ulfh2LS8QPzozoGMZnt/Ywnz6LJLdVWSLx7fmZehgo8IAgsMR3RQlkO6QQ4kUbZwDW3Lno908mGawu6p0u2FSpZ0ZSUFm/zy4mEU50R7BlD10LF1L/0Q71GROouS5ekBsGdS2fomah98OmGgVR7SxvUt1CW7l5VxILLahP/O+xJdo0EmWOs89ajpvc6xAXgZJBNB/A+djdv/IuTAlvMS3iTdgkkN6l2mF0Ibs11ZMqJlRrH3T+p3OrLIFTdJJ0ACEOwbmmAZLmp9jcT8ac4LXrpkH3FZUPh+YGBWmbBBBh9db/IjxCEWM19KYawkWxAwEsfJfcbN2DWtPCZjjsGY6Y+KMEQ2sUDr8K7chOXYYTe91fDcGHE42K5gVOCfpj2afYWjUjgHAzy+Gq3FNiTAJQFzRds2mAblMlJrt7Yf2nN6LJmNJfXwVsIBNF//Pey8zpVn+aq4l4iylDkGrb0eAehxPUElBDwg6zIGseniZoyECbGuZ2IVm7SXLgCbfs7MXQ5koYDfpXiNJKsDkIl52NTe73+LlYZa6dGYzCjN2Kr0+j8U7sWYkSOe36CNeytFm6Qpjlsxsno8Vr3pQ9hGYkDUGWRISnbL2L1FooB0o=
-  file: "${OUTDIR}/..//vertcoin-$HOST.zip"
+  file: "${OUTDIR}/..//thebestcoin-$HOST.zip"
   on:
-    repo: vertcoin/vertcoin
+    repo: thebestcoin/thebestcoin
     tags: true

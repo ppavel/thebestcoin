@@ -65,7 +65,7 @@
     </message>
 </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Netwerk-sinkronisasie...</translation>
@@ -123,8 +123,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Vertcoin address</source>
-        <translation>Stuur munte na 'n Vertcoin adres</translation>
+        <source>Send coins to a TheBestCoin address</source>
+        <translation>Stuur munte na 'n TheBestCoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -135,8 +135,8 @@
         <translation>Verander die wagwoord wat ek vir kodifikasie van my beursie gebruik</translation>
     </message>
     <message>
-        <source>Vertcoin</source>
-        <translation>Vertcoin</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -159,20 +159,20 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your Vertcoin addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u Vertcoin adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your TheBestCoin addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u TheBestCoin adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Vertcoin addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Vertcoin adresse</translation>
+        <source>Verify messages to ensure they were signed with specified TheBestCoin addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde TheBestCoin adresse</translation>
     </message>
     <message>
         <source>&amp;Help</source>
         <translation>&amp;Help</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and vertcoin: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en vertcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and thebestcoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en thebestcoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -183,8 +183,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a vertcoin: URI or payment request</source>
-        <translation>Skep 'n vertcoin: URI of betalingsversoek</translation>
+        <source>Open a thebestcoin: URI or payment request</source>
+        <translation>Skep 'n thebestcoin: URI of betalingsversoek</translation>
     </message>
     </context>
 <context>
@@ -251,10 +251,10 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
-        <source>Vertcoin Core</source>
-        <translation>Vertcoin Kern</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin Kern</translation>
     </message>
     <message>
         <source>Do not keep transactions in the mempool longer than &lt;n&gt; hours (default: %u)</source>

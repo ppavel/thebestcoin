@@ -61,7 +61,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Sincronizando con la red...</translation>
@@ -123,8 +123,8 @@
         <translation>Abrir &amp;URL...</translation>
     </message>
     <message>
-        <source>Send coins to a Vertcoin address</source>
-        <translation>Enviando monedas a una dirección de Vertcoin</translation>
+        <source>Send coins to a TheBestCoin address</source>
+        <translation>Enviando monedas a una dirección de TheBestCoin</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -143,8 +143,8 @@
         <translation>&amp;Verificar Mensaje...</translation>
     </message>
     <message>
-        <source>Vertcoin</source>
-        <translation>Vertcoin</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -251,10 +251,10 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
-        <source>Vertcoin Core</source>
-        <translation>Vertcoin Core</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

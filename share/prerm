@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ -f /lib/systemd/system/thebestcoind.service ]]
+then
+    systemctl stop thebestcoind >/dev/null || true
+    systemctl disable thebestcoind >/dev/null || true
+    systemctl --system daemon-reload >/dev/null || true
+    rm -f /lib/systemd/system/thebestcoind.service
+fi
+
+if [[ -f /etc/init/thebestcoind.conf ]]
+then
+    service thebestcoind stop
+    rm -f /etc/init/thebestcoind.conf || true
+fi

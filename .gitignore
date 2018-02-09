@@ -9,6 +9,10 @@ src/vertcoin
 src/vertcoind
 src/vertcoin-cli
 src/vertcoin-tx
+src/thebestcoin
+src/thebestcoind
+src/thebestcoin-cli
+src/thebestcoin-tx
 src/test/test_bitcoin
 src/test/test_bitcoin_fuzzy
 src/qt/test/test_bitcoin-qt
@@ -67,6 +71,8 @@ src/qt/test/moc*.cpp
 *.log
 *.trs
 *.dmg
+*.deb
+*.rpm
 
 *.json.h
 *.raw.h
@@ -80,8 +86,10 @@ src/qt/test/moc*.cpp
 Makefile
 vertcoin-qt
 bitcoin-qt
+thebestcoin-qt
 Bitcoin-Qt.app
 Vertcoin-Qt.app
+TheBestCoin-Qt.app
 
 # Unit-tests
 Makefile.test
@@ -116,3 +124,17 @@ qa/cache/*
 
 libbitcoinconsensus.pc
 contrib/devtools/split-debug.sh
+
+# ide
+.idea
+cmake*
+
+# vagrant
+.vagrant
+contrib/gitian-vagrant/sync
+contrib/gitian-vagrant/Vagrantfile
+!contrib/gitian-vagrant/osslsigncode-1.7.1.tar.gz
+!contrib/gitian-vagrant/osslsigncode-Backports-to-1.7.1.patch
+
+# etc
+!.gitkeep

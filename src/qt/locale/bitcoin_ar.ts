@@ -73,7 +73,7 @@
     </message>
 </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>التوقيع و الرسائل</translation>
@@ -155,7 +155,7 @@
         <translation>إعادة الفهرسة الكتل على القرص ...</translation>
     </message>
     <message>
-        <source>Send coins to a Vertcoin address</source>
+        <source>Send coins to a TheBestCoin address</source>
         <translation>ارسل عملات الى عنوان بيتكوين</translation>
     </message>
     <message>
@@ -179,7 +179,7 @@
         <translation>&amp;التحقق من الرسالة...</translation>
     </message>
     <message>
-        <source>Vertcoin</source>
+        <source>TheBestCoin</source>
         <translation>بت كوين</translation>
     </message>
     <message>
@@ -207,12 +207,12 @@
         <translation>تشفير المفتاح الخاص بمحفظتك</translation>
     </message>
     <message>
-        <source>Sign messages with your Vertcoin addresses to prove you own them</source>
-        <translation>وقَع الرسائل بواسطة ال: Vertcoin الخاص بك لإثبات امتلاكك لهم</translation>
+        <source>Sign messages with your TheBestCoin addresses to prove you own them</source>
+        <translation>وقَع الرسائل بواسطة ال: TheBestCoin الخاص بك لإثبات امتلاكك لهم</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Vertcoin addresses</source>
-        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Vertcoin محدَدة</translation>
+        <source>Verify messages to ensure they were signed with specified TheBestCoin addresses</source>
+        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل TheBestCoin محدَدة</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -231,7 +231,7 @@
         <translation>شريط أدوات علامات التبويب</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and vertcoin: URIs)</source>
+        <source>Request payments (generates QR codes and thebestcoin: URIs)</source>
         <translation>أطلب دفعات (يولد كودات الرمز المربع وبيت كوين: العناوين المعطاة)</translation>
     </message>
     <message>
@@ -243,8 +243,8 @@
         <translation>عرض قائمة عناوين الإستقبال المستخدمة والملصقات</translation>
     </message>
     <message>
-        <source>Open a vertcoin: URI or payment request</source>
-        <translation>فتح URI : Vertcoin أو طلب دفع</translation>
+        <source>Open a thebestcoin: URI or payment request</source>
+        <translation>فتح URI : TheBestCoin أو طلب دفع</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1002,7 +1002,7 @@
         <translation>هذا دفع اعتيادي</translation>
     </message>
     <message>
-        <source>The Vertcoin address to send the payment to</source>
+        <source>TheBestCoin address to send the payment to</source>
         <translation>عنوان البت كوين المرسل اليه الدفع</translation>
     </message>
     <message>
@@ -1068,7 +1068,7 @@
         <translation>التوقيع</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Vertcoin address</source>
+        <source>Sign the message to prove you own this TheBestCoin address</source>
         <translation>وقع الرسالة لتثبت انك تمتلك عنوان البت كوين هذا</translation>
     </message>
     <message>
@@ -1109,7 +1109,7 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>خيارات: </translation>
@@ -1123,7 +1123,7 @@
         <translation>قبول الاتصالات من خارج</translation>
     </message>
     <message>
-        <source>Vertcoin Core</source>
+        <source>TheBestCoin</source>
         <translation>جوهر البيت كوين</translation>
     </message>
     <message>

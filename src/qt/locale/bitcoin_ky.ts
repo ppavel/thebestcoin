@@ -17,7 +17,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -27,8 +27,8 @@
         <translation>Билдирүүнү &amp;текшерүү...</translation>
     </message>
     <message>
-        <source>Vertcoin</source>
-        <translation>Vertcoin</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -231,7 +231,7 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
         <source>Information</source>
         <translation>Маалымат</translation>

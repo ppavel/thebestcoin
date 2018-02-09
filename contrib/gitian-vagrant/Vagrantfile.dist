@@ -1,0 +1,84 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+#
+# Run before "vagrant up"
+# vagrant plugin install vagrant-vbguest vagrant-hostmanager vagrant-cachier
+# vagrant plugin install vagrant-disksize
+# vagrant plugin install vagrant-reload
+
+require 'rbconfig'
+
+IP_ADDRESS = "172.22.22.200"
+PROJECT_NAME = "thebestcoin"
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure(2) do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://atlas.hashicorp.com/search.
+  config.vm.box = "debian/jessie64"
+  config.disksize.size = '20GB'
+
+  # SSH Key Access
+  # public_key_path = File.join(Dir.home, ".ssh", "id_rsa.pub")
+  # if File.exist?(public_key_path)
+  #   public_key = IO.read(public_key_path)
+  # end
+  # config.ssh.forward_agent = true
+  # config.ssh.keys_only = false
+
+  # Disables the vagrant generated key.
+  # Uncomment if you only want access via user's key.
+  #config.ssh.insert_key = false
+
+
+  # config.vm.provision :shell, :inline => <<-SCRIPT
+  #   set -e
+#
+  #   # Add host user's ssh public key to authorized_hosts
+  #   homedir=$(getent passwd "$SUDO_USER" | cut -d: -f6)
+  #   echo '#{public_key}' >> $homedir/.ssh/authorized_keys
+  #   chmod 600 $homedir/.ssh/authorized_keys
+  # SCRIPT
+
+  # Configure VirtualBox environment
+  config.vm.provider :virtualbox do |v|
+    v.name = PROJECT_NAME + "_thebestcoin"
+    v.cpus = 2
+    v.memory = 6000
+    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    v.customize ["modifyvm", :id, "--ioapic", "on"]
+  end
+
+  # Create a forwarded port mapping which allows access to a specific port
+  # within the machine from a port on the host machine. In the example below,
+  # accessing "localhost:8080" will access port 80 on the guest machine.
+  # config.vm.network "forwarded_port", guest: 80, host: 2080
+
+  # Use hostonly network with a static IP Address and enable
+  # hostmanager so we can have a custom domain for the server
+  # by modifying the host machines hosts file
+  config.hostmanager.enabled = true
+  config.hostmanager.manage_host = true
+  # config.vm.define PROJECT_NAME do |node|
+  config.vm.define PROJECT_NAME + "_thebestcoin" do |node|
+      node.vm.hostname = PROJECT_NAME + ".dev"
+      node.vm.network :private_network, ip: IP_ADDRESS
+      node.hostmanager.aliases = [
+          PROJECT_NAME + ".dev",
+          "www." + PROJECT_NAME + ".dev"
+      ]
+  end
+
+  config.vm.provision "shell", path: "provision/install.sh", privileged: true
+  config.vm.provision "shell", path: "provision/resize-partition.sh", privileged: true
+  config.vm.provision :reload
+  config.vm.provision "shell", privileged: true, inline: "resize2fs /dev/sda1"
+  config.vm.provision "shell", path: "provision/build.sh", privileged: false
+end

@@ -45,7 +45,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Синхронизација са мрежом у току...</translation>
@@ -99,8 +99,8 @@
         <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
-        <source>Send coins to a Vertcoin address</source>
-        <translation>Пошаљите новац на vertcoin адресу</translation>
+        <source>Send coins to a TheBestCoin address</source>
+        <translation>Пошаљите новац на thebestcoin адресу</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -347,7 +347,7 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcije</translation>

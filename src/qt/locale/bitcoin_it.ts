@@ -73,7 +73,7 @@
     </message>
 </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firma &amp;messaggio...</translation>
@@ -155,8 +155,8 @@
         <translation>Re-indicizzazione blocchi su disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Vertcoin address</source>
-        <translation>Invia fondi ad un indirizzo Vertcoin</translation>
+        <source>Send coins to a TheBestCoin address</source>
+        <translation>Invia fondi ad un indirizzo TheBestCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -179,8 +179,8 @@
         <translation>&amp;Verifica messaggio...</translation>
     </message>
     <message>
-        <source>Vertcoin</source>
-        <translation>Vertcoin</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -207,12 +207,12 @@
         <translation>Cifra le chiavi private che appartengono al tuo portamonete</translation>
     </message>
     <message>
-        <source>Sign messages with your Vertcoin addresses to prove you own them</source>
-        <translation>Firma messaggi con i tuoi indirizzi Vertcoin per dimostrarne il possesso</translation>
+        <source>Sign messages with your TheBestCoin addresses to prove you own them</source>
+        <translation>Firma messaggi con i tuoi indirizzi TheBestCoin per dimostrarne il possesso</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Vertcoin addresses</source>
-        <translation>Verifica che i messaggi siano stati firmati con gli indirizzi Vertcoin specificati</translation>
+        <source>Verify messages to ensure they were signed with specified TheBestCoin addresses</source>
+        <translation>Verifica che i messaggi siano stati firmati con gli indirizzi TheBestCoin specificati</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -231,8 +231,8 @@
         <translation>Barra degli strumenti</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and vertcoin: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e vertcoin: URI)</translation>
+        <source>Request payments (generates QR codes and thebestcoin: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e thebestcoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -243,16 +243,16 @@
         <translation>Mostra la lista degli indirizzi di ricezione utilizzati</translation>
     </message>
     <message>
-        <source>Open a vertcoin: URI or payment request</source>
-        <translation>Apri un vertcoin: URI o una richiesta di pagamento</translation>
+        <source>Open a thebestcoin: URI or payment request</source>
+        <translation>Apri un thebestcoin: URI o una richiesta di pagamento</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opzioni della riga di &amp;comando</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Vertcoin network</source>
-        <translation><numerusform>%n connessione attiva alla rete Vertcoin</numerusform><numerusform>%n connessioni alla rete Vertcoin attive</numerusform></translation>
+        <source>%n active connection(s) to TheBestCoin network</source>
+        <translation><numerusform>%n connessione attiva alla rete TheBestCoin</numerusform><numerusform>%n connessioni alla rete TheBestCoin attive</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -288,7 +288,7 @@
     </message>
     <message>
         <source>Last received block was generated %1 ago.</source>
-        <translation>L'ultimo blocco ricevuto è stato generato %1 fa.</translation>
+        <translation>L'ultimo blocco ricevuto ?? stato generato %1 fa.</translation>
     </message>
     <message>
         <source>Transactions after this will not yet be visible.</source>
@@ -323,7 +323,7 @@
     <message>
         <source>Amount: %1
 </source>
-        <translation>Quantità: %1
+        <translation>Quantit??: %1
 </translation>
     </message>
     <message>
@@ -354,11 +354,11 @@
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
-        <translation>Il portamonete è &lt;b&gt;cifrato&lt;/b&gt; ed attualmente &lt;b&gt;sbloccato&lt;/b&gt;</translation>
+        <translation>Il portamonete ?? &lt;b&gt;cifrato&lt;/b&gt; ed attualmente &lt;b&gt;sbloccato&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
-        <translation>Il portamonete è &lt;b&gt;cifrato&lt;/b&gt; ed attualmente &lt;b&gt;bloccato&lt;/b&gt;</translation>
+        <translation>Il portamonete ?? &lt;b&gt;cifrato&lt;/b&gt; ed attualmente &lt;b&gt;bloccato&lt;/b&gt;</translation>
     </message>
 </context>
 <context>
@@ -369,7 +369,7 @@
     </message>
     <message>
         <source>Quantity:</source>
-        <translation>Quantità:</translation>
+        <translation>Quantit??:</translation>
     </message>
     <message>
         <source>Bytes:</source>
@@ -381,7 +381,7 @@
     </message>
     <message>
         <source>Priority:</source>
-        <translation>Priorità:</translation>
+        <translation>Priorit??:</translation>
     </message>
     <message>
         <source>Fee:</source>
@@ -405,11 +405,11 @@
     </message>
     <message>
         <source>Tree mode</source>
-        <translation>Modalità Albero</translation>
+        <translation>Modalit?? Albero</translation>
     </message>
     <message>
         <source>List mode</source>
-        <translation>Modalità Lista</translation>
+        <translation>Modalit?? Lista</translation>
     </message>
     <message>
         <source>Amount</source>
@@ -437,7 +437,7 @@
     </message>
     <message>
         <source>Priority</source>
-        <translation>Priorità</translation>
+        <translation>Priorit??</translation>
     </message>
 </context>
 <context>
@@ -456,7 +456,7 @@
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
-        <translation>L'indirizzo associato con questa voce della lista degli indirizzi. Può essere modificato solo per gli indirizzi d'invio.</translation>
+        <translation>L'indirizzo associato con questa voce della lista degli indirizzi. Pu?? essere modificato solo per gli indirizzi d'invio.</translation>
     </message>
     <message>
         <source>&amp;Address</source>
@@ -467,7 +467,7 @@
     <name>FreespaceChecker</name>
     <message>
         <source>A new data directory will be created.</source>
-        <translation>Sarà creata una nuova cartella dati.</translation>
+        <translation>Sar?? creata una nuova cartella dati.</translation>
     </message>
     <message>
         <source>name</source>
@@ -475,11 +475,11 @@
     </message>
     <message>
         <source>Directory already exists. Add %1 if you intend to create a new directory here.</source>
-        <translation>Cartella già esistente. Aggiungi %1 se intendi creare qui una nuova cartella.</translation>
+        <translation>Cartella gi?? esistente. Aggiungi %1 se intendi creare qui una nuova cartella.</translation>
     </message>
     <message>
         <source>Path already exists, and is not a directory.</source>
-        <translation>Il percorso è già esistente e non è una cartella.</translation>
+        <translation>Il percorso ?? gi?? esistente e non ?? una cartella.</translation>
     </message>
     <message>
         <source>Cannot create data directory here.</source>
@@ -549,7 +549,7 @@
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
-        <translation>Errore: La cartella dati "%1" specificata non può essere creata.</translation>
+        <translation>Errore: La cartella dati "%1" specificata non pu?? essere creata.</translation>
     </message>
     <message>
         <source>Error</source>
@@ -619,12 +619,12 @@
     </message>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
-        <translation>Riduci ad icona invece di uscire dall'applicazione quando la finestra viene chiusa. Attivando questa opzione l'applicazione terminerà solo dopo aver selezionato Esci dal menu File.</translation>
+        <translation>Riduci ad icona invece di uscire dall'applicazione quando la finestra viene chiusa. Attivando questa opzione l'applicazione terminer?? solo dopo aver selezionato Esci dal menu File.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
-        <translation>URL di terze parti (ad es. un block explorer) che appaiono nella tabella delle transazioni come voci nel menu contestuale. "%s" nell'URL è sostituito dall'hash della transazione.
-Per specificare più URL separarli con una barra verticale "|".</translation>
+        <translation>URL di terze parti (ad es. un block explorer) che appaiono nella tabella delle transazioni come voci nel menu contestuale. "%s" nell'URL ?? sostituito dall'hash della transazione.
+Per specificare pi?? URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Third party transaction URLs</source>
@@ -660,27 +660,27 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Abilita le funzionalità di coin &amp;control</translation>
+        <translation>Abilita le funzionalit?? di coin &amp;control</translation>
     </message>
     <message>
         <source>If you disable the spending of unconfirmed change, the change from a transaction cannot be used until that transaction has at least one confirmation. This also affects how your balance is computed.</source>
-        <translation>Disabilitando l'uso di resti non confermati, il resto di una transazione non potrà essere speso fino a quando non avrà ottenuto almeno una conferma. Questa impostazione influisce inoltre sul calcolo del saldo.</translation>
+        <translation>Disabilitando l'uso di resti non confermati, il resto di una transazione non potr?? essere speso fino a quando non avr?? ottenuto almeno una conferma. Questa impostazione influisce inoltre sul calcolo del saldo.</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
         <translation>&amp;Spendi resti non confermati</translation>
     </message>
     <message>
-        <source>Automatically open the Vertcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Apri automaticamente la porta del client Vertcoin sul router. Il protocollo UPnP deve essere supportato da parte del router ed attivo.</translation>
+        <source>Automatically open TheBestCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Apri automaticamente la porta del client TheBestCoin sul router. Il protocollo UPnP deve essere supportato da parte del router ed attivo.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mappa le porte tramite &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Vertcoin network through a SOCKS5 proxy.</source>
-        <translation>Connessione alla rete Vertcoin attraverso un proxy SOCKS5.</translation>
+        <source>Connect to TheBestCoin network through a SOCKS5 proxy.</source>
+        <translation>Connessione alla rete TheBestCoin attraverso un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -719,8 +719,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Vertcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Connette alla rete Vertcoin attraverso un proxy SOCKS5 separato per Tor.</translation>
+        <source>Connect to TheBestCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Connette alla rete TheBestCoin attraverso un proxy SOCKS5 separato per Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -752,11 +752,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>&amp;Unità di misura con cui visualizzare gli importi:</translation>
+        <translation>&amp;Unit?? di misura con cui visualizzare gli importi:</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Scegli l'unità di suddivisione predefinita da utilizzare per l'interfaccia e per l'invio di vertcoin.</translation>
+        <translation>Scegli l'unit?? di suddivisione predefinita da utilizzare per l'interfaccia e per l'invio di thebestcoin.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -784,11 +784,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Client restart required to activate changes.</source>
-        <translation>È necessario un riavvio del client per applicare le modifiche.</translation>
+        <translation>?? necessario un riavvio del client per applicare le modifiche.</translation>
     </message>
     <message>
         <source>Client will be shut down. Do you want to proceed?</source>
-        <translation>Il client sarà arrestato. Si desidera procedere?</translation>
+        <translation>Il client sar?? arrestato. Si desidera procedere?</translation>
     </message>
     <message>
         <source>This change would require a client restart.</source>
@@ -796,7 +796,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>The supplied proxy address is invalid.</source>
-        <translation>L'indirizzo proxy che hai fornito non è valido.</translation>
+        <translation>L'indirizzo proxy che hai fornito non ?? valido.</translation>
     </message>
 </context>
 <context>
@@ -806,8 +806,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Vertcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Le informazioni visualizzate potrebbero non essere aggiornate. Il portamonete si sincronizza automaticamente con la rete Vertcoin una volta stabilita una connessione, ma questo processo non è ancora stato completato.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with TheBestCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Le informazioni visualizzate potrebbero non essere aggiornate. Il portamonete si sincronizza automaticamente con la rete TheBestCoin una volta stabilita una connessione, ma questo processo non ?? ancora stato completato.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -896,8 +896,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Importo</translation>
     </message>
     <message>
-        <source>Enter a Vertcoin address (e.g. %1)</source>
-        <translation>Inserisci un indirizzo Vertcoin (ad es. %1)</translation>
+        <source>Enter a TheBestCoin address (e.g. %1)</source>
+        <translation>Inserisci un indirizzo TheBestCoin (ad es. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1008,7 +1008,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Select a peer to view detailed information.</source>
-        <translation>Seleziona un peer per visualizzare informazioni più dettagliate.</translation>
+        <translation>Seleziona un peer per visualizzare informazioni pi?? dettagliate.</translation>
     </message>
     <message>
         <source>Whitelisted</source>
@@ -1076,7 +1076,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Last block time</source>
-        <translation>Ora del blocco più recente</translation>
+        <translation>Ora del blocco pi?? recente</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -1120,7 +1120,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Ban Node for</source>
-        <translation>Nodo Bannato perché</translation>
+        <translation>Nodo Bannato perch??</translation>
     </message>
     <message>
         <source>1 &amp;hour</source>
@@ -1222,8 +1222,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>R&amp;iusa un indirizzo di ricezione (non raccomandato)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Vertcoin network.</source>
-        <translation>Un messaggio opzionale da allegare e mostrare all'apertura della richiesta di pagamento. Nota: Il messaggio non sarà inviato con il pagamento sulla rete Vertcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over TheBestCoin network.</source>
+        <translation>Un messaggio opzionale da allegare e mostrare all'apertura della richiesta di pagamento. Nota: Il messaggio non sar?? inviato con il pagamento sulla rete TheBestCoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1293,11 +1293,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Invia Vertcoin</translation>
+        <translation>Invia TheBestCoin</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
-        <translation>Funzionalità di Coin Control</translation>
+        <translation>Funzionalit?? di Coin Control</translation>
     </message>
     <message>
         <source>Inputs...</source>
@@ -1313,7 +1313,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Quantity:</source>
-        <translation>Quantità:</translation>
+        <translation>Quantit??:</translation>
     </message>
     <message>
         <source>Bytes:</source>
@@ -1325,7 +1325,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Priority:</source>
-        <translation>Priorità:</translation>
+        <translation>Priorit??:</translation>
     </message>
     <message>
         <source>Fee:</source>
@@ -1341,7 +1341,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>If this is activated, but the change address is empty or invalid, change will be sent to a newly generated address.</source>
-        <translation>In caso di abilitazione con indirizzo vuoto o non valido, il resto sarà inviato ad un nuovo indirizzo generato appositamente.</translation>
+        <translation>In caso di abilitazione con indirizzo vuoto o non valido, il resto sar?? inviato ad un nuovo indirizzo generato appositamente.</translation>
     </message>
     <message>
         <source>Custom change address</source>
@@ -1365,7 +1365,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>If the custom fee is set to 1000 satoshis and the transaction is only 250 bytes, then "per kilobyte" only pays 250 satoshis in fee, while "total at least" pays 1000 satoshis. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Se la commissione personalizzata è impostata su 1000 satoshi e la transazione è di soli 250 byte, allora "per kilobyte" paga solo 250 satoshi di commissione, mentre "somma almeno" paga 1000 satoshi. Per transazioni più grandi di un kilobyte, entrambe le opzioni pagano al kilobyte.</translation>
+        <translation>Se la commissione personalizzata ?? impostata su 1000 satoshi e la transazione ?? di soli 250 byte, allora "per kilobyte" paga solo 250 satoshi di commissione, mentre "somma almeno" paga 1000 satoshi. Per transazioni pi?? grandi di un kilobyte, entrambe le opzioni pagano al kilobyte.</translation>
     </message>
     <message>
         <source>Hide</source>
@@ -1376,8 +1376,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>somma almeno</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for vertcoin transactions than the network can process.</source>
-        <translation>Non vi è alcuna controindicazione a pagare la commissione minima, a patto che il volume delle transazioni sia inferiore allo spazio disponibile nei blocchi. Occorre comunque essere consapevoli che ciò potrebbe impedire la conferma delle transazioni nel caso in cui la rete risultasse satura.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for thebestcoin transactions than the network can process.</source>
+        <translation>Non vi ?? alcuna controindicazione a pagare la commissione minima, a patto che il volume delle transazioni sia inferiore allo spazio disponibile nei blocchi. Occorre comunque essere consapevoli che ci?? potrebbe impedire la conferma delle transazioni nel caso in cui la rete risultasse satura.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1409,7 +1409,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Send to multiple recipients at once</source>
-        <translation>Invia simultaneamente a più beneficiari</translation>
+        <translation>Invia simultaneamente a pi?? beneficiari</translation>
     </message>
     <message>
         <source>Add &amp;Recipient</source>
@@ -1460,11 +1460,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>This is a normal payment.</source>
-        <translation>Questo è un normale pagamento.</translation>
+        <translation>Questo ?? un normale pagamento.</translation>
     </message>
     <message>
-        <source>The Vertcoin address to send the payment to</source>
-        <translation>L'indirizzo Vertcoin a cui vuoi inviare il pagamento</translation>
+        <source>TheBestCoin address to send the payment to</source>
+        <translation>L'indirizzo TheBestCoin a cui vuoi inviare il pagamento</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1483,8 +1483,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Rimuovi questa voce</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less vertcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>La commissione sarà sottratta dall'importo che si sta inviando. Il beneficiario riceverà un totale di vertcoin inferiore al valore digitato. Nel caso in cui siano stati selezionati più beneficiari la commissione sarà suddivisa in parti uguali.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less thebestcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>La commissione sar?? sottratta dall'importo che si sta inviando. Il beneficiario ricever?? un totale di thebestcoin inferiore al valore digitato. Nel caso in cui siano stati selezionati pi?? beneficiari la commissione sar?? suddivisa in parti uguali.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1496,19 +1496,19 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>This is an unauthenticated payment request.</source>
-        <translation>Questa è una richiesta di pagamento non autenticata.</translation>
+        <translation>Questa ?? una richiesta di pagamento non autenticata.</translation>
     </message>
     <message>
         <source>This is an authenticated payment request.</source>
-        <translation>Questa è una richiesta di pagamento autenticata.</translation>
+        <translation>Questa ?? una richiesta di pagamento autenticata.</translation>
     </message>
     <message>
         <source>Enter a label for this address to add it to the list of used addresses</source>
         <translation>Inserisci un'etichetta per questo indirizzo per aggiungerlo alla lista degli indirizzi utilizzati</translation>
     </message>
     <message>
-        <source>A message that was attached to the vertcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Vertcoin network.</source>
-        <translation>Messaggio incluso nel vertcoin URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete Vertcoin.</translation>
+        <source>A message that was attached to TheBestCoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over TheBestCoin network.</source>
+        <translation>Messaggio incluso nel thebestcoin URI e che sar?? memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sar?? inviato attraverso la rete TheBestCoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1523,7 +1523,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     <name>ShutdownWindow</name>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
-        <translation>Non spegnere il computer fino a quando questa finestra non si sarà chiusa.</translation>
+        <translation>Non spegnere il computer fino a quando questa finestra non si sar?? chiusa.</translation>
     </message>
 </context>
 <context>
@@ -1537,12 +1537,12 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>&amp;Firma Messaggio</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive vertcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>È possibile firmare messaggi/accordi con i propri indirizzi in modo da dimostrare di poter ricevere vertcoin attraverso di essi. Si consiglia di prestare attenzione a non firmare dichiarazioni vaghe o casuali, attacchi di phishing potrebbero cercare di indurre ad apporre la firma su di esse. Si raccomanda di firmare esclusivamente dichiarazioni completamente dettagliate e delle quali si condivide in pieno il contenuto.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive thebestcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>?? possibile firmare messaggi/accordi con i propri indirizzi in modo da dimostrare di poter ricevere thebestcoin attraverso di essi. Si consiglia di prestare attenzione a non firmare dichiarazioni vaghe o casuali, attacchi di phishing potrebbero cercare di indurre ad apporre la firma su di esse. Si raccomanda di firmare esclusivamente dichiarazioni completamente dettagliate e delle quali si condivide in pieno il contenuto.</translation>
     </message>
     <message>
-        <source>The Vertcoin address to sign the message with</source>
-        <translation>L'indirizzo Vertcoin da utilizzare per firmare il messaggio</translation>
+        <source>TheBestCoin address to sign the message with</source>
+        <translation>L'indirizzo TheBestCoin da utilizzare per firmare il messaggio</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1573,8 +1573,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Copia la firma corrente nella clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Vertcoin address</source>
-        <translation>Firma un messaggio per dimostrare di possedere questo indirizzo Vertcoin</translation>
+        <source>Sign the message to prove you own this TheBestCoin address</source>
+        <translation>Firma un messaggio per dimostrare di possedere questo indirizzo TheBestCoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1594,14 +1594,14 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</source>
-        <translation>Per verificare il messaggio inserire l'indirizzo del firmatario, il messaggio e la firma nei campi sottostanti, assicurandosi di copiare esattamente anche ritorni a capo, spazi, tabulazioni, etc.. Si raccomanda di non lasciarsi fuorviare dalla firma a leggere più di quanto non sia riportato nel testo del messaggio stesso, in modo da evitare di cadere vittima di attacchi di tipo man-in-the-middle. Si ricorda che la verifica della firma dimostra soltanto che il firmatario può ricevere pagamenti con l'indirizzo corrispondente, non prova l'invio di alcuna transazione.</translation>
+        <translation>Per verificare il messaggio inserire l'indirizzo del firmatario, il messaggio e la firma nei campi sottostanti, assicurandosi di copiare esattamente anche ritorni a capo, spazi, tabulazioni, etc.. Si raccomanda di non lasciarsi fuorviare dalla firma a leggere pi?? di quanto non sia riportato nel testo del messaggio stesso, in modo da evitare di cadere vittima di attacchi di tipo man-in-the-middle. Si ricorda che la verifica della firma dimostra soltanto che il firmatario pu?? ricevere pagamenti con l'indirizzo corrispondente, non prova l'invio di alcuna transazione.</translation>
     </message>
     <message>
-        <source>The Vertcoin address the message was signed with</source>
-        <translation>L'indirizzo Vertcoin con cui è stato contrassegnato il messaggio</translation>
+        <source>TheBestCoin address the message was signed with</source>
+        <translation>L'indirizzo TheBestCoin con cui ?? stato contrassegnato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Vertcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified TheBestCoin address</source>
         <translation>Verifica il messaggio per accertare che sia stato firmato con l'indirizzo specificato</translation>
     </message>
     <message>
@@ -1638,11 +1638,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     <name>UnitDisplayStatusBarControl</name>
     <message>
         <source>Unit to show amounts in. Click to select another unit.</source>
-        <translation>Unità con cui visualizzare gli importi. Clicca per selezionare un'altra unità.</translation>
+        <translation>Unit?? con cui visualizzare gli importi. Clicca per selezionare un'altra unit??.</translation>
     </message>
 </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opzioni:</translation>
@@ -1665,27 +1665,27 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>If &lt;category&gt; is not supplied or if &lt;category&gt; = 1, output all debugging information.</source>
-        <translation>Se &lt;category&gt; non è specificato oppure se &lt;category&gt; = 1, mostra tutte le informazioni di debug.</translation>
+        <translation>Se &lt;category&gt; non ?? specificato oppure se &lt;category&gt; = 1, mostra tutte le informazioni di debug.</translation>
     </message>
     <message>
         <source>Prune configured below the minimum of %d MiB.  Please use a higher number.</source>
-        <translation>La modalità prune è configurata al di sotto del minimo di %d MB. Si prega di utilizzare un valore più elevato.</translation>
+        <translation>La modalit?? prune ?? configurata al di sotto del minimo di %d MB. Si prega di utilizzare un valore pi?? elevato.</translation>
     </message>
     <message>
         <source>Prune: last wallet synchronisation goes beyond pruned data. You need to -reindex (download the whole blockchain again in case of pruned node)</source>
-        <translation>Prune: l'ultima sincronizzazione del wallet risulta essere oltre la riduzione dei dati. È necessario eseguire un -reindex (scaricare nuovamente la blockchain in caso di nodo pruned)</translation>
+        <translation>Prune: l'ultima sincronizzazione del wallet risulta essere oltre la riduzione dei dati. ?? necessario eseguire un -reindex (scaricare nuovamente la blockchain in caso di nodo pruned)</translation>
     </message>
     <message>
         <source>Reduce storage requirements by pruning (deleting) old blocks. This mode is incompatible with -txindex and -rescan. Warning: Reverting this setting requires re-downloading the entire blockchain. (default: 0 = disable pruning blocks, &gt;%u = target size in MiB to use for block files)</source>
-        <translation>Riduce i requisiti di spazio di archiviazione attraverso la rimozione dei vecchi blocchi (pruning). Questa modalità è incompatibile con l'opzione -txindex e -rescan. Attenzione: ripristinando questa opzione l'intera blockchain dovrà essere riscaricata. (default: 0 = disabilita il pruning, &gt;%u = dimensione desiderata in MiB per i file dei blocchi)</translation>
+        <translation>Riduce i requisiti di spazio di archiviazione attraverso la rimozione dei vecchi blocchi (pruning). Questa modalit?? ?? incompatibile con l'opzione -txindex e -rescan. Attenzione: ripristinando questa opzione l'intera blockchain dovr?? essere riscaricata. (default: 0 = disabilita il pruning, &gt;%u = dimensione desiderata in MiB per i file dei blocchi)</translation>
     </message>
     <message>
         <source>Rescans are not possible in pruned mode. You will need to use -reindex which will download the whole blockchain again.</source>
-        <translation>Non è possibile un Rescan in modalità pruned. Sarà necessario utilizzare -reindex che farà scaricare nuovamente tutta la blockchain.</translation>
+        <translation>Non ?? possibile un Rescan in modalit?? pruned. Sar?? necessario utilizzare -reindex che far?? scaricare nuovamente tutta la blockchain.</translation>
     </message>
     <message>
         <source>Error: A fatal internal error occurred, see debug.log for details</source>
-        <translation>Errore: si è presentato un errore interno fatale, consulta il file debug.log per maggiori dettagli</translation>
+        <translation>Errore: si ?? presentato un errore interno fatale, consulta il file debug.log per maggiori dettagli</translation>
     </message>
     <message>
         <source>Fee (in %s/kB) to add to transactions you send (default: %s)</source>
@@ -1708,8 +1708,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Accetta connessioni dall'esterno (predefinito: 1 se -proxy o -connect non sono utilizzati)</translation>
     </message>
     <message>
-        <source>Vertcoin Core</source>
-        <translation>Vertcoin Core</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -1725,7 +1725,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation>Esegue un comando quando lo stato di una transazione del portamonete cambia (%s in cmd è sostituito da TxID)</translation>
+        <translation>Esegue un comando quando lo stato di una transazione del portamonete cambia (%s in cmd ?? sostituito da TxID)</translation>
     </message>
     <message>
         <source>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</source>
@@ -1733,15 +1733,15 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>
-        <translation>Il database dei blocchi contiene un blocco che sembra provenire dal futuro. Questo può essere dovuto alla data e ora del tuo computer impostate in modo scorretto. Ricostruisci il database dei blocchi se sei certo che la data e l'ora sul tuo computer siano corrette</translation>
+        <translation>Il database dei blocchi contiene un blocco che sembra provenire dal futuro. Questo pu?? essere dovuto alla data e ora del tuo computer impostate in modo scorretto. Ricostruisci il database dei blocchi se sei certo che la data e l'ora sul tuo computer siano corrette</translation>
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Questa versione è una compilazione pre-rilascio - usala a tuo rischio - non utilizzarla per la generazione o per applicazioni di commercio</translation>
+        <translation>Questa versione ?? una compilazione pre-rilascio - usala a tuo rischio - non utilizzarla per la generazione o per applicazioni di commercio</translation>
     </message>
     <message>
         <source>Use UPnP to map the listening port (default: 1 when listening and no -proxy)</source>
-        <translation>Utilizza UPnP per mappare la porta in ascolto (default: 1 quando in ascolto e -proxy non è specificato)</translation>
+        <translation>Utilizza UPnP per mappare la porta in ascolto (default: 1 quando in ascolto e -proxy non ?? specificato)</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -1753,7 +1753,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
-        <translation>Inserisce in whitelist i peer che si connettono da un dato indirizzo IP o netmask. Può essere specificato più volte.</translation>
+        <translation>Inserisce in whitelist i peer che si connettono da un dato indirizzo IP o netmask. Pu?? essere specificato pi?? volte.</translation>
     </message>
     <message>
         <source>-maxmempool must be at least %d MB</source>
@@ -1797,7 +1797,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Enable publish hash transaction in &lt;address&gt;</source>
-        <translation>Abilità pubblicazione hash transazione in &lt;address&gt;</translation>
+        <translation>Abilit?? pubblicazione hash transazione in &lt;address&gt;</translation>
     </message>
     <message>
         <source>Enable publish raw block in &lt;address&gt;</source>
@@ -1825,7 +1825,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Error: Disk space is low!</source>
-        <translation>Errore: la spazio libero sul disco è insufficiente!</translation>
+        <translation>Errore: la spazio libero sul disco ?? insufficiente!</translation>
     </message>
     <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
@@ -1837,7 +1837,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Incorrect or no genesis block found. Wrong datadir for network?</source>
-        <translation>Blocco genesi non corretto o non trovato. È possibile che la cartella dati appartenga ad un'altra rete.</translation>
+        <translation>Blocco genesi non corretto o non trovato. ?? possibile che la cartella dati appartenga ad un'altra rete.</translation>
     </message>
     <message>
         <source>Invalid -onion address: '%s'</source>
@@ -1857,11 +1857,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Prune cannot be configured with a negative value.</source>
-        <translation>La modalità prune non può essere configurata con un valore negativo.</translation>
+        <translation>La modalit?? prune non pu?? essere configurata con un valore negativo.</translation>
     </message>
     <message>
         <source>Prune mode is incompatible with -txindex.</source>
-        <translation>La modalità prune è incompatibile con l'opzione -txindex.</translation>
+        <translation>La modalit?? prune ?? incompatibile con l'opzione -txindex.</translation>
     </message>
     <message>
         <source>Set database cache size in megabytes (%d to %d, default: %d)</source>
@@ -1913,7 +1913,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Allow JSON-RPC connections from specified source. Valid for &lt;ip&gt; are a single IP (e.g. 1.2.3.4), a network/netmask (e.g. 1.2.3.4/255.255.255.0) or a network/CIDR (e.g. 1.2.3.4/24). This option can be specified multiple times</source>
-        <translation>Permette connessioni JSON-RPC dall'origine specificata. I valori validi per &lt;ip&gt; sono un singolo IP (ad es. 1.2.3.4), una network/netmask (ad es. 1.2.3.4/255.255.255.0) oppure una network/CIDR (ad es. 1.2.3.4/24). Questa opzione può essere specificata più volte.</translation>
+        <translation>Permette connessioni JSON-RPC dall'origine specificata. I valori validi per &lt;ip&gt; sono un singolo IP (ad es. 1.2.3.4), una network/netmask (ad es. 1.2.3.4/255.255.255.0) oppure una network/CIDR (ad es. 1.2.3.4/24). Questa opzione pu?? essere specificata pi?? volte.</translation>
     </message>
     <message>
         <source>Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6</source>
@@ -1921,11 +1921,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</source>
-        <translation>Resta in attesa di connessioni JSON-RPC sull'indirizzo indicato. Usa la notazione [host]:porta per IPv6. Questa opzione può essere specificata più volte (predefinito: associa a tutte le interfacce) </translation>
+        <translation>Resta in attesa di connessioni JSON-RPC sull'indirizzo indicato. Usa la notazione [host]:porta per IPv6. Questa opzione pu?? essere specificata pi?? volte (predefinito: associa a tutte le interfacce) </translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
-        <translation>Crea nuovi file con i permessi di default del sistema, invece che con umask 077 (ha effetto solo con funzionalità di portamonete disabilitate)</translation>
+        <translation>Crea nuovi file con i permessi di default del sistema, invece che con umask 077 (ha effetto solo con funzionalit?? di portamonete disabilitate)</translation>
     </message>
     <message>
         <source>Discover own IP addresses (default: 1 when listening and no -externalip or -proxy)</source>
@@ -1937,7 +1937,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
-        <translation>Esegue un comando in caso di ricezione di un allarme pertinente o se si rileva un fork molto lungo (%s in cmd è sostituito dal messaggio)</translation>
+        <translation>Esegue un comando in caso di ricezione di un allarme pertinente o se si rileva un fork molto lungo (%s in cmd ?? sostituito dal messaggio)</translation>
     </message>
     <message>
         <source>Fees (in %s/kB) smaller than this are considered zero fee for relaying, mining and transaction creation (default: %s)</source>
@@ -1957,7 +1957,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect)</source>
-        <translation>Ottiene gli indirizzi dei peer attraverso interrogazioni DNS, in caso di scarsa disponibilità (predefinito: 1 a meno che -connect non sia specificato)</translation>
+        <translation>Ottiene gli indirizzi dei peer attraverso interrogazioni DNS, in caso di scarsa disponibilit?? (predefinito: 1 a meno che -connect non sia specificato)</translation>
     </message>
     <message>
         <source>Randomize credentials for every proxy connection. This enables Tor stream isolation (default: %u)</source>
@@ -1965,7 +1965,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Set maximum size of high-priority/low-fee transactions in bytes (default: %d)</source>
-        <translation>Imposta la dimensione massima in byte delle transazioni ad alta-priorità/basse-commissioni (predefinito: %d)</translation>
+        <translation>Imposta la dimensione massima in byte delle transazioni ad alta-priorit??/basse-commissioni (predefinito: %d)</translation>
     </message>
     <message>
         <source>The transaction amount is too small to send after the fee has been deducted</source>
@@ -1977,11 +1977,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
-        <translation>I peer inclusi in whitelist non possono subire ban per DoS e le loro transazioni saranno sempre trasmesse, anche nel caso in cui si trovino già nel mempool. Ciò è utile ad es. per i gateway</translation>
+        <translation>I peer inclusi in whitelist non possono subire ban per DoS e le loro transazioni saranno sempre trasmesse, anche nel caso in cui si trovino gi?? nel mempool. Ci?? ?? utile ad es. per i gateway</translation>
     </message>
     <message>
         <source>You need to rebuild the database using -reindex to go back to unpruned mode.  This will redownload the entire blockchain</source>
-        <translation>Per ritornare alla modalità unpruned sarà necessario ricostruire il database utilizzando l'opzione -reindex. L'intera blockchain sarà riscaricata.</translation>
+        <translation>Per ritornare alla modalit?? unpruned sar?? necessario ricostruire il database utilizzando l'opzione -reindex. L'intera blockchain sar?? riscaricata.</translation>
     </message>
     <message>
         <source>(default: %u)</source>
@@ -2025,7 +2025,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Need to specify a port with -whitebind: '%s'</source>
-        <translation>È necessario specificare una porta con -whitebind: '%s'</translation>
+        <translation>?? necessario specificare una porta con -whitebind: '%s'</translation>
     </message>
     <message>
         <source>Node relay options:</source>
@@ -2057,7 +2057,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
-        <translation>Riduce il file debug.log all'avvio del client (predefinito: 1 se -debug non è impostato)</translation>
+        <translation>Riduce il file debug.log all'avvio del client (predefinito: 1 se -debug non ?? impostato)</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -2065,11 +2065,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>The transaction amount is too small to pay the fee</source>
-        <translation>L'importo della transazione è troppo basso per pagare la commissione</translation>
+        <translation>L'importo della transazione ?? troppo basso per pagare la commissione</translation>
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>Questo è un software sperimentale.</translation>
+        <translation>Questo ?? un software sperimentale.</translation>
     </message>
     <message>
         <source>Tor control port password (default: empty)</source>
@@ -2113,7 +2113,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Whether to operate in a blocks only mode (default: %u)</source>
-        <translation>Imposta se operare in modalità solo blocchi (default: %u)</translation>
+        <translation>Imposta se operare in modalit?? solo blocchi (default: %u)</translation>
     </message>
     <message>
         <source>Zapping all transactions from wallet...</source>
@@ -2129,7 +2129,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
-        <translation>Esegue un comando quando il miglior blocco cambia (%s nel cmd è sostituito dall'hash del blocco)</translation>
+        <translation>Esegue un comando quando il miglior blocco cambia (%s nel cmd ?? sostituito dall'hash del blocco)</translation>
     </message>
     <message>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
@@ -2145,15 +2145,15 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
-        <translation>-maxtxfee è impostato molto alto! Commissioni così alte possono venir pagate anche su una singola transazione.</translation>
+        <translation>-maxtxfee ?? impostato molto alto! Commissioni cos?? alte possono venir pagate anche su una singola transazione.</translation>
     </message>
     <message>
         <source>-paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
-        <translation>-paytxfee è impostato su un valore molto elevato. Questa è la commissione che si paga quando si invia una transazione.</translation>
+        <translation>-paytxfee ?? impostato su un valore molto elevato. Questa ?? la commissione che si paga quando si invia una transazione.</translation>
     </message>
     <message>
         <source>Do not keep transactions in the mempool longer than &lt;n&gt; hours (default: %u)</source>
-        <translation>Non mantenere le transazioni nella mempool più a lungo di &lt;n&gt; ore (default: %u)</translation>
+        <translation>Non mantenere le transazioni nella mempool pi?? a lungo di &lt;n&gt; ore (default: %u)</translation>
     </message>
     <message>
         <source>Fees (in %s/kB) smaller than this are considered zero fee for transaction creation (default: %s)</source>
@@ -2161,7 +2161,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>How thorough the block verification of -checkblocks is (0-4, default: %u)</source>
-        <translation>Determina quanto sarà approfondita la verifica da parte di -checkblocks (0-4, predefinito: %u)</translation>
+        <translation>Determina quanto sar?? approfondita la verifica da parte di -checkblocks (0-4, predefinito: %u)</translation>
     </message>
     <message>
         <source>Maintain a full transaction index, used by the getrawtransaction rpc call (default: %u)</source>
@@ -2173,7 +2173,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Output debugging information (default: %u, supplying &lt;category&gt; is optional)</source>
-        <translation>Emette informazioni di debug (predefinito: %u, fornire &lt;category&gt; è opzionale)</translation>
+        <translation>Emette informazioni di debug (predefinito: %u, fornire &lt;category&gt; ?? opzionale)</translation>
     </message>
     <message>
         <source>Support filtering of blocks and transaction with bloom filters (default: %u)</source>
@@ -2189,7 +2189,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Argomento -socks non supportato. Non è più possibile impostare la versione SOCKS, solamente i proxy SOCKS5 sono supportati.</translation>
+        <translation>Argomento -socks non supportato. Non ?? pi?? possibile impostare la versione SOCKS, solamente i proxy SOCKS5 sono supportati.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -2197,7 +2197,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Username and hashed password for JSON-RPC connections. The field &lt;userpw&gt; comes in the format: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. A canonical python script is included in share/rpcuser. This option can be specified multiple times</source>
-        <translation>Username e hash password per connessioni JSON-RPC. Il campo &lt;userpw&gt; utilizza il formato: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. Uno script python standard è incluso in share/rpcuser. Questa opzione può essere specificata più volte</translation>
+        <translation>Username e hash password per connessioni JSON-RPC. Il campo &lt;userpw&gt; utilizza il formato: &lt;USERNAME&gt;:&lt;SALT&gt;$&lt;HASH&gt;. Uno script python standard ?? incluso in share/rpcuser. Questa opzione pu?? essere specificata pi?? volte</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -2309,11 +2309,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Cannot downgrade wallet</source>
-        <translation>Non è possibile effettuare il downgrade del portamonete</translation>
+        <translation>Non ?? possibile effettuare il downgrade del portamonete</translation>
     </message>
     <message>
         <source>Cannot write default address</source>
-        <translation>Non è possibile scrivere l'indirizzo predefinito</translation>
+        <translation>Non ?? possibile scrivere l'indirizzo predefinito</translation>
     </message>
     <message>
         <source>Rescanning...</source>

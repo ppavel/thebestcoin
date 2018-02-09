@@ -33,7 +33,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -115,6 +115,6 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     </context>
 </TS>

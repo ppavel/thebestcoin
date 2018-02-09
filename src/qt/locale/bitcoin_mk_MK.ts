@@ -61,7 +61,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Потпиши &amp;порака...</translation>
@@ -135,7 +135,7 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
-        <source>Send coins to a Vertcoin address</source>
+        <source>Send coins to a TheBestCoin address</source>
         <translation>Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>
@@ -143,7 +143,7 @@
         <translation>&amp;Потврди порака...</translation>
     </message>
     <message>
-        <source>Vertcoin</source>
+        <source>TheBestCoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -561,13 +561,13 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Опции:</translation>
     </message>
     <message>
-        <source>Vertcoin Core</source>
+        <source>TheBestCoin</source>
         <translation>Биткоин Core</translation>
     </message>
     <message>

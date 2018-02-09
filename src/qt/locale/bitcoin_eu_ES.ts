@@ -65,7 +65,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Sarearekin sinkronizatzen...</translation>
@@ -100,7 +100,7 @@
     </message>
     <message>
         <source>Show information about Qt</source>
-        <translation>Erakutsi Vertcoin-i buruzko informazioa</translation>
+        <translation>Erakutsi TheBestCoin-i buruzko informazioa</translation>
     </message>
     <message>
         <source>&amp;Options...</source>
@@ -343,7 +343,7 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Aukerak</translation>

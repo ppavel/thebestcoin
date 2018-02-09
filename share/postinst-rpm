@@ -1,0 +1,53 @@
+#!/bin/bash
+
+USER=$(logname 2>/dev/null || echo $SUDO_USER)
+
+CONF="
+[Unit]
+Description=TheBestCoin distributed currency daemon
+After=network.target
+
+[Service]
+User=${USER}
+
+Type=forking
+ExecStart=/usr/local/bin/thebestcoind -daemon -datadir=/home/${USER}/.thebestcoin -pid=/home/${USER}/.thebestcoin/thebestcoind.pid
+ExecStop=/usr/local/bin/thebestcoin-cli -datadir=/home/${USER}/.thebestcoin stop
+PIDFile=/home/${USER}/.thebestcoin/thebestcoind.pid
+
+Restart=on-failure
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=5s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target"
+
+mkdir -p /home/${USER}/.thebestcoin
+
+#installs CHROOTed, so no way just to copy conf file
+[ -f /home/${USER}/.thebestcoin/thebestcoin.conf ] || echo -e "addnode=5.230.11.229\naddnode=5.230.11.230\nrpcuser=thebestcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > /home/${USER}/.thebestcoin/thebestcoin.conf
+
+chown -R $USER /home/${USER}/.thebestcoin
+
+# to break thru the non-interactive way of rpm installs
+echo "Would you like to start headless TheBestCoin daemon at system boot? [y/N] " >/dev/tty
+if exec </dev/tty; then
+    read response;
+fi
+
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+then
+    echo "$CONF" > /lib/systemd/system/thebestcoind.service
+
+    systemctl --system daemon-reload >/dev/null || true
+    if ! systemctl is-enabled thebestcoind >/dev/null 
+    then
+        systemctl enable thebestcoind >/dev/null || true
+        systemctl start thebestcoind >/dev/null || true
+    else
+        systemctl restart thebestcoind >/dev/null || true
+    fi
+fi

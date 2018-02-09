@@ -37,7 +37,7 @@
     </message>
     </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;கண்ணோட்டம்</translation>
@@ -75,8 +75,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Vertcoin</source>
-        <translation>Vertcoin</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -659,10 +659,10 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     <message>
-        <source>Vertcoin Core</source>
-        <translation>Vertcoin மையம்</translation>
+        <source>TheBestCoin</source>
+        <translation>TheBestCoin மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

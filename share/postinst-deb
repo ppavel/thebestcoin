@@ -1,0 +1,108 @@
+#!/bin/bash
+
+USER=$(logname 2>/dev/null || echo $SUDO_USER)
+
+CONF="
+[Unit]
+Description=TheBestCoin distributed currency daemon
+After=network.target
+
+[Service]
+User=${USER}
+
+Type=forking
+ExecStart=/usr/local/bin/thebestcoind -daemon -datadir=/home/${USER}/.thebestcoin -pid=/home/${USER}/.thebestcoin/thebestcoind.pid
+ExecStop=/usr/local/bin/thebestcoin-cli -datadir=/home/${USER}/.thebestcoin stop
+PIDFile=/home/${USER}/.thebestcoin/thebestcoind.pid
+
+Restart=on-failure
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=5s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target"
+
+INIT="
+description 'TheBestCoin Daemon'
+
+start on runlevel [2345]
+stop on starting rc RUNLEVEL=[016]
+
+expect fork
+
+respawn
+respawn limit 5 120
+kill timeout 300
+
+exec start-stop-daemon \
+    --start \
+    --pidfile /home/${USER}/.thebestcoin/thebestcoind.pid \
+    --exec /usr/local/bin/thebestcoind \
+    -- \
+    -pid=/home/${USER}/.thebestcoin/thebestcoind.pid \
+    -datadir=/home/${USER}/.thebestcoin \
+    -daemon
+
+pre-stop exec /usr/local/bin/bitcoin-cli -datadir=/home/${USER}/.thebestcoin stop"
+
+mkdir -p /home/${USER}/.thebestcoin
+
+#installs CHROOTed, so no way just to copy conf file
+[ -f /home/${USER}/.thebestcoin/thebestcoin.conf ] || echo -e "addnode=5.230.11.229\naddnode=5.230.11.230\nrpcuser=thebestcoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > /home/${USER}/.thebestcoin/thebestcoin.conf
+
+chown -R $USER /home/${USER}/.thebestcoin
+
+issystemd() {
+    local pids p myns ns systemctl
+
+    # if the directory /etc/systemd/system does not exit, it is not systemd
+    [ ! -d /etc/systemd/system ] && return 1
+
+    # if there is no systemctl command, it is not systemd
+    systemctl=$(which systemctl 2>/dev/null || command -v systemctl 2>/dev/null)
+    [ -z "${systemctl}" -o ! -x "${systemctl}" ] && return 1
+
+    # if pid 1 is systemd, it is systemd
+    [ "$(basename $(readlink /proc/1/exe) 2>/dev/null)" = "systemd" ] && return 0
+
+    # if systemd is not running, it is not systemd
+    pids=$(pidof systemd 2>/dev/null)
+    [ -z "${pids}" ] && return 1
+
+    # check if the running systemd processes are not in our namespace
+    myns="$(readlink /proc/self/ns/pid 2>/dev/null)"
+    for p in ${pids}
+    do
+        ns="$(readlink /proc/${p}/ns/pid 2>/dev/null)"
+
+        # if pid of systemd is in our namespace, it is systemd
+        [ ! -z "${myns}" && "${myns}" = "${ns}" ] && return 0
+    done
+
+    # else, it is not systemd
+    return 1
+}
+
+read -r -p "Would you like to start headless TheBestCoin daemon at system boot? [y/N] " response
+if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]
+then
+	if issystemd
+	then
+	    echo "$CONF" > /lib/systemd/system/thebestcoind.service
+
+	    systemctl --system daemon-reload >/dev/null || true
+	    if ! systemctl is-enabled thebestcoind >/dev/null 
+	    then
+	        systemctl enable thebestcoind >/dev/null || true
+	        systemctl start thebestcoind >/dev/null || true
+	    else
+	        systemctl restart thebestcoind >/dev/null || true
+	    fi
+	else
+		echo "$INIT" > /etc/init/thebestcoind.conf
+		service thebestcoind start
+	fi
+fi

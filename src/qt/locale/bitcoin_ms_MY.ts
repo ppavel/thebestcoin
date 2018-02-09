@@ -42,7 +42,7 @@ Alihkan fail data ke dalam tab semasa</translation>
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>&amp;Options...</source>
         <translation>Pilihan</translation>
@@ -128,6 +128,6 @@ Alihkan fail data ke dalam tab semasa</translation>
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     </context>
 </TS>

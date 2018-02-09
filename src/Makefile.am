@@ -24,23 +24,23 @@ BITCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAG
 BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
 BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBBITCOIN_SERVER=libvertcoin_server.a
-LIBBITCOIN_COMMON=libvertcoin_common.a
-LIBBITCOIN_CONSENSUS=libvertcoin_consensus.a
-LIBBITCOIN_CLI=libvertcoin_cli.a
-LIBBITCOIN_UTIL=libvertcoin_util.a
-LIBBITCOIN_CRYPTO=crypto/libvertcoin_crypto.a
-LIBBITCOINQT=qt/libvertcoinqt.a
+LIBBITCOIN_SERVER=libthebestcoin_server.a
+LIBBITCOIN_COMMON=libthebestcoin_common.a
+LIBBITCOIN_CONSENSUS=libthebestcoin_consensus.a
+LIBBITCOIN_CLI=libthebestcoin_cli.a
+LIBBITCOIN_UTIL=libthebestcoin_util.a
+LIBBITCOIN_CRYPTO=crypto/libthebestcoin_crypto.a
+LIBBITCOINQT=qt/libthebestcoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libvertcoin_zmq.a
+LIBBITCOIN_ZMQ=libthebestcoin_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBBITCOINCONSENSUS=libvertcoinconsensus.la
+LIBBITCOINCONSENSUS=libthebestcoinconsensus.la
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libvertcoin_wallet.a
+LIBBITCOIN_WALLET=libthebestcoin_wallet.a
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -66,11 +66,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += vertcoind
+  bin_PROGRAMS += thebestcoind
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += vertcoin-cli vertcoin-tx
+  bin_PROGRAMS += thebestcoin-cli thebestcoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -168,12 +168,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libvertcoin_util_a-clientversion.$(OBJEXT): obj/build.h
+libthebestcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between bitcoind and vertcoin-qt
-libvertcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libvertcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libvertcoin_server_a_SOURCES = \
+# server: shared between bitcoind and thebestcoin-qt
+libthebestcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libthebestcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libthebestcoin_server_a_SOURCES = \
   addrman.cpp \
   addrdb.cpp \
   bloom.cpp \
@@ -212,20 +212,20 @@ libvertcoin_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
-libvertcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libvertcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libvertcoin_zmq_a_SOURCES = \
+libthebestcoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libthebestcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libthebestcoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
 endif
 
 
-# wallet: shared between bitcoind and vertcoin-qt, but only linked
+# wallet: shared between bitcoind and thebestcoin-qt, but only linked
 # when wallet enabled
-libvertcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libvertcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libvertcoin_wallet_a_SOURCES = \
+libthebestcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libthebestcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libthebestcoin_wallet_a_SOURCES = \
   wallet/crypter.cpp \
   wallet/db.cpp \
   wallet/rpcdump.cpp \
@@ -236,9 +236,9 @@ libvertcoin_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libvertcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
-crypto_libvertcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libvertcoin_crypto_a_SOURCES = \
+crypto_libthebestcoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
+crypto_libthebestcoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libthebestcoin_crypto_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/common.h \
@@ -257,9 +257,9 @@ crypto_libvertcoin_crypto_a_SOURCES = \
 
 
 # consensus: shared between all executables that validate any consensus rules.
-libvertcoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libvertcoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libvertcoin_consensus_a_SOURCES = \
+libthebestcoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libthebestcoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libthebestcoin_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -296,27 +296,31 @@ libvertcoin_consensus_a_SOURCES = \
   crypto/Lyra2RE/Lyra2.h \
   crypto/Lyra2RE/Sponge.c \
   crypto/Lyra2RE/Sponge.h \
+  crypto/Lyra2RE/sph_types.h \
   crypto/Lyra2RE/blake.c \
-  crypto/Lyra2RE/blake.h \
+  crypto/Lyra2RE/sph_blake.h \
   crypto/Lyra2RE/groestl.c \
-  crypto/Lyra2RE/groestl.h \
+  crypto/Lyra2RE/sph_groestl.h \
   crypto/Lyra2RE/keccak.c \
-  crypto/Lyra2RE/keccak.h \
+  crypto/Lyra2RE/sph_keccak.h \
   crypto/Lyra2RE/skein.c \
-  crypto/Lyra2RE/skein.h \
+  crypto/Lyra2RE/sph_skein.h \
   crypto/Lyra2RE/cubehash.c \
-  crypto/Lyra2RE/cubehash.h \
+  crypto/Lyra2RE/sph_cubehash.h \
   crypto/Lyra2RE/bmw.c \
-  crypto/Lyra2RE/bmw.h \
-  crypto/scrypt.cpp \
-  crypto/scrypt.h
+  crypto/Lyra2RE/sph_bmw.h
 
 
 
-# common: shared between bitcoind, and vertcoin-qt and non-server tools
-libvertcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libvertcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libvertcoin_common_a_SOURCES = \
+# common: shared between bitcoind, and thebestcoin-qt and non-server tools
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# !!!!!!!!!!!!!! [Genesis block info]
+# !!!!!!!!!!!!!! TO MINE GENESIS BLOCK ADD pow.cpp BEFORE chainparams.cpp
+# !!!!!!!!!!!!!! OTHERWISE REMOVE pow.cpp
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+libthebestcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libthebestcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libthebestcoin_common_a_SOURCES = \
   amount.cpp \
   base58.cpp \
   chainparams.cpp \
@@ -338,9 +342,9 @@ libvertcoin_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libvertcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libvertcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libvertcoin_util_a_SOURCES = \
+libthebestcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libthebestcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libthebestcoin_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -358,30 +362,30 @@ libvertcoin_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libvertcoin_util_a_SOURCES += compat/glibc_compat.cpp
+libthebestcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between bitcoin-cli and vertcoin-qt
-libvertcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libvertcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libvertcoin_cli_a_SOURCES = \
+# cli: shared between bitcoin-cli and thebestcoin-qt
+libthebestcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libthebestcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libthebestcoin_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libvertcoin_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libthebestcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-vertcoind_SOURCES = bitcoind.cpp
-vertcoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-vertcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-vertcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+thebestcoind_SOURCES = bitcoind.cpp
+thebestcoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+thebestcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+thebestcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-vertcoind_SOURCES += bitcoind-res.rc
+thebestcoind_SOURCES += bitcoind-res.rc
 endif
 
-vertcoind_LDADD = \
+thebestcoind_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -394,38 +398,38 @@ vertcoind_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-vertcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+thebestcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # bitcoin-cli binary #
-vertcoin_cli_SOURCES = bitcoin-cli.cpp
-vertcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-vertcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-vertcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+thebestcoin_cli_SOURCES = bitcoin-cli.cpp
+thebestcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+thebestcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+thebestcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-vertcoin_cli_SOURCES += bitcoin-cli-res.rc
+thebestcoin_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-vertcoin_cli_LDADD = \
+thebestcoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-vertcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+thebestcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-vertcoin_tx_SOURCES = bitcoin-tx.cpp
-vertcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-vertcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-vertcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+thebestcoin_tx_SOURCES = bitcoin-tx.cpp
+thebestcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+thebestcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+thebestcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-vertcoin_tx_SOURCES += bitcoin-tx-res.rc
+thebestcoin_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-vertcoin_tx_LDADD = \
+thebestcoin_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -433,22 +437,22 @@ vertcoin_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-vertcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+thebestcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h
-libvertcoinconsensus_la_SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) $(libbitcoin_consensus_a_SOURCES)
+libthebestcoinconsensus_la_SOURCES = $(crypto_libthebestcoin_crypto_a_SOURCES) $(libthebestcoin_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libvertcoinconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libthebestcoinconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libvertcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libvertcoinconsensus_la_LIBADD = $(LIBSECP256K1)
-libvertcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libvertcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libthebestcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libthebestcoinconsensus_la_LIBADD = $(LIBSECP256K1)
+libthebestcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libthebestcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #

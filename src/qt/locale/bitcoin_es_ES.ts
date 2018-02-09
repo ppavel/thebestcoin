@@ -65,7 +65,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>VertcoinGUI</name>
+    <name>TheBestCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -143,8 +143,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Vertcoin address</source>
-        <translation>Envia monedas a una dirección Vertcoin</translation>
+        <source>Send coins to a TheBestCoin address</source>
+        <translation>Envia monedas a una dirección TheBestCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -227,6 +227,6 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>vertcoin-core</name>
+    <name>thebestcoin-core</name>
     </context>
 </TS>

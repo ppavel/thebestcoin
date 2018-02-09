@@ -191,7 +191,7 @@ void Shutdown()
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    RenameThread("vertcoin-shutoff");
+    RenameThread("thebestcoin-shutoff");
     mempool.AddTransactionsUpdated(1);
 
     StopHTTPRPC();
@@ -207,6 +207,7 @@ void Shutdown()
     peerLogic.reset();
     g_connman.reset();
 
+    GenerateBitcoins(false, 0, Params());
     StopTorControl();
     UnregisterNodeSignals(GetNodeSignals());
     DumpMempool();
@@ -498,8 +499,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/vertcoin/vertcoin>";
-    const std::string URL_WEBSITE = "<https://vertcoin.org>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/thebestcoin/thebestcoin>";
+    const std::string URL_WEBSITE = "<http://thebestcoin.io>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2009, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -603,7 +604,7 @@ void CleanupBlockRevFiles()
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
     const CChainParams& chainparams = Params();
-    RenameThread("vertcoin-loadblk");
+    RenameThread("thebestcoin-loadblk");
 
     {
     CImportingNow imp;
@@ -780,7 +781,7 @@ void InitLogging()
     fLogIPs = GetBoolArg("-logips", DEFAULT_LOGIPS);
 
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("Vertcoin version %s\n", FormatFullVersion());
+    LogPrintf("TheBestCoin version %s\n", FormatFullVersion());
 }
 
 namespace { // Variables internal to initialization process only
@@ -1572,6 +1573,8 @@ bool AppInitMain(boost::thread_group& threadGroup, CScheduler& scheduler)
         return InitError(strNodeError);
 
     // ********************************************************* Step 12: finished
+
+    GenerateBitcoins(GetBoolArg("-gen", DEFAULT_GENERATE), GetArg("-genproclimit", DEFAULT_GENERATE_THREADS), chainparams);
 
     SetRPCWarmupFinished();
     uiInterface.InitMessage(_("Done loading"));

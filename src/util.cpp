@@ -99,8 +99,8 @@ namespace boost {
 
 using namespace std;
 
-const char * const BITCOIN_CONF_FILENAME = "vertcoin.conf";
-const char * const BITCOIN_PID_FILENAME = "vertcoind.pid";
+const char * const BITCOIN_CONF_FILENAME = "thebestcoin.conf";
+const char * const BITCOIN_PID_FILENAME = "thebestcoind.pid";
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
@@ -433,7 +433,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "vertcoin";
+    const char* pszModule = "thebestcoin";
 #endif
     if (pex)
         return strprintf(
@@ -453,13 +453,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Vertcoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Vertcoin
-    // Mac: ~/Library/Application Support/Vertcoin
-    // Unix: ~/.vertcoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\TheBestCoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\TheBestCoin
+    // Mac: ~/Library/Application Support/TheBestCoin
+    // Unix: ~/.thebestcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Vertcoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "TheBestCoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -469,10 +469,10 @@ boost::filesystem::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Vertcoin";
+    return pathRet / "Library/Application Support/TheBestCoin";
 #else
     // Unix
-    return pathRet / ".vertcoin";
+    return pathRet / ".thebestcoin";
 #endif
 #endif
 }
@@ -787,6 +787,19 @@ bool SetupNetworking()
         return false;
 #endif
     return true;
+}
+
+void SetThreadPriority(int nPriority)
+{
+#ifdef WIN32
+    SetThreadPriority(GetCurrentThread(), nPriority);
+#else // WIN32
+#ifdef PRIO_THREAD
+    setpriority(PRIO_THREAD, 0, nPriority);
+#else // PRIO_THREAD
+    setpriority(PRIO_PROCESS, 0, nPriority);
+#endif // PRIO_THREAD
+#endif // WIN32
 }
 
 int GetNumCores()
