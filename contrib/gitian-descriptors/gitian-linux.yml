@@ -24,7 +24,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/thebestcoin/thethebestcoin.git"
+- "url": "https://github.com/thebestcoin/thebestcoin.git"
   "dir": "thebestcoin"
 files: []
 script: |
