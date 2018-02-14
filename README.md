@@ -1,20 +1,15 @@
 TheBestCoin integration/staging tree
 ================================
 
-http://www.thebestcoin.io
-
-Copyright (c) 2009-2017 Bitcoin Developers
-Copyright (c) 2014-2017 TheBestCoin Developers
-
 What is TheBestCoin?
 ----------------
 
-TheBestCoin is a lite version of Bitcoin using Lyra2RE as a proof-of-work algorithm.
- - 2.5 minute block targets
- - subsidy halves in 840k blocks (~4 years)
- - ~84 million total coins
- - 50 coins per block
- - Every block to retarget difficulty with Kimotos Gravity Well algorithm
+TheBestCoin is Bitcoin/Vertcoin fork using Lyra2REv2 (with higher memory requirement) as a proof-of-work algorithm.
+ - 2 minute block targets
+ - subsidy halves in 110k blocks (~5 months)
+ - ~2.2 billion total coins
+ - 10000 coins per block
+ - Every block to retarget difficulty with Dark Gravity Wave algorithm
 
 For more information, as well as an immediately useable, binary version of
 the TheBestCoin client sofware, see http://thebestcoin.io.
