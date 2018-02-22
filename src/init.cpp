@@ -207,7 +207,6 @@ void Shutdown()
     peerLogic.reset();
     g_connman.reset();
 
-    GenerateBitcoins(false, 0, Params());
     StopTorControl();
     UnregisterNodeSignals(GetNodeSignals());
     DumpMempool();
@@ -1573,8 +1572,6 @@ bool AppInitMain(boost::thread_group& threadGroup, CScheduler& scheduler)
         return InitError(strNodeError);
 
     // ********************************************************* Step 12: finished
-
-    GenerateBitcoins(GetBoolArg("-gen", DEFAULT_GENERATE), GetArg("-genproclimit", DEFAULT_GENERATE_THREADS), chainparams);
 
     SetRPCWarmupFinished();
     uiInterface.InitMessage(_("Done loading"));
