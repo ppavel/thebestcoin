@@ -75,8 +75,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlockMain(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "21/02/2018 USA Men's Hockey Team lost Winter Olympics 2018";
-    std::cout << "CreateGenesisBlockMain" << std::endl;
+    const char* pszTimestamp = "26/02/2018 Japan's Inpex Wins Abu Dhabi Oil Stake";
     const CScript genesisOutputScript = CScript() << ParseHex("04879b33e9940e57ab29c51e992deb19c9b347f379e664aba4db00e590d77368b9bcc62aa88a88b53cacf141b2b3f23f8292fb3d531e93eab744b18d08cab07412") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -215,7 +214,7 @@ public:
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.nMinNFactor = 10;
         consensus.nMaxNFactor = 30;
-        consensus.nChainStartTime = 1519201103;
+        consensus.nChainStartTime = 1519637444;
         consensus.nKGWInterval = 12;
         consensus.fRbfEnabled = false;
         consensus.fPowNoRetargeting = false;
@@ -225,17 +224,17 @@ public:
         // Deployment of BIP65, BIP66, and BIP34.
         consensus.vDeployments[Consensus::DEPLOYMENT_NVERSIONBIPS].bit = 2;
         consensus.vDeployments[Consensus::DEPLOYMENT_NVERSIONBIPS].nStartTime = 1517591350;
-        consensus.vDeployments[Consensus::DEPLOYMENT_NVERSIONBIPS].nTimeout = 1530134800;
+        consensus.vDeployments[Consensus::DEPLOYMENT_NVERSIONBIPS].nTimeout = 1551173444;
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1517591350;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1530134800;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1551173444;
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1517591350;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1530134800;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1551173444;
 
         // The best chain should have at least this much work.
         // @TODO: this parameter is not used for a while until the chain work would get higher. For now validation is done using checkpoints.
@@ -253,16 +252,16 @@ public:
         nDefaultPort = 8801;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlockMain(1519201103, 3584413, 0x1e0ffff0, 1, 10000 * COIN);
+        genesis = CreateGenesisBlockMain(1519637444, 208868, 0x1e0ffff0, 1, 10000 * COIN);
 
         // uncomment to mine genesis block
         //MineGenesisBlock(&genesis, consensus, *this);
 
         consensus.hashGenesisBlock = genesis.GetHash();
 
-        assert(genesis.hashMerkleRoot == uint256S("0x007836e245a7d5ffec808cb31b094073c7be995fc93f01302a22c2baae675a50"));
-        assert(genesis.GetPoWHash() == uint256S("0x000001866402676f038074cbe812bc5b736ece39b1a776dbabdf0b4f5d376d55"));
-        assert(consensus.hashGenesisBlock == uint256S("0x79150c87212853cfbc0cc643f75ccf7e1cc5b76ed4c0b5cc4c081813310570ad"));
+        assert(genesis.hashMerkleRoot == uint256S("0x3b2151763816660310a81a9bf0ff3ef3b55fbaa6247d7511618339c2c0904798"));
+        assert(genesis.GetPoWHash() == uint256S("0x000004e8bde6f80bf359d8bff9e127fcc2bb1232169356a4e947c9844d0d54fb"));
+        assert(consensus.hashGenesisBlock == uint256S("0xa2248b4862e80521db8e8d2ee90157bc82068bbf75ff7c6f8d2a485ea1b77142"));
 
         vSeeds.clear();
         vFixedSeeds.clear();
@@ -282,8 +281,8 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (0, uint256S("0x79150c87212853cfbc0cc643f75ccf7e1cc5b76ed4c0b5cc4c081813310570ad")),
-            1519201103, // * UNIX timestamp of last checkpoint block
+            (0, uint256S("0xa2248b4862e80521db8e8d2ee90157bc82068bbf75ff7c6f8d2a485ea1b77142")),
+            1519637444, // * UNIX timestamp of last checkpoint block
             0,   // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             450.0     // * estimated number of transactions per day after checkpoint
@@ -316,17 +315,17 @@ public:
         // Deployment of BIP65, BIP66, and BIP34.
         consensus.vDeployments[Consensus::DEPLOYMENT_NVERSIONBIPS].bit = 2;
         consensus.vDeployments[Consensus::DEPLOYMENT_NVERSIONBIPS].nStartTime = 1517591350;
-        consensus.vDeployments[Consensus::DEPLOYMENT_NVERSIONBIPS].nTimeout = 1530134800;
+        consensus.vDeployments[Consensus::DEPLOYMENT_NVERSIONBIPS].nTimeout = 1551173444;
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1517591350;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout =   1530134800;
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout =   1551173444;
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1517591350;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1530134800;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1551173444;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100010");
