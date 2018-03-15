@@ -1,5 +1,5 @@
 ---
-name: "thebestcoin-win-1.0.14"
+name: "thebestcoin-win-1.0.15"
 enable_cache: true
 suites:
 - "trusty"
